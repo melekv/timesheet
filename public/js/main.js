@@ -299,6 +299,7 @@ addBtn.addEventListener('click', async (e) => {
 // update button
 updateBtn.addEventListener('click', async (e) => {
     e.preventDefault();
+    
 
     const type = document.getElementById('add-item-type').value;
     let fieldsObj = null;
