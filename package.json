@@ -1,0 +1,27 @@
+{
+  "name": "timesheet",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)\r [![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)\r [![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)\r [![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "parcel public/js/main.js",
+    "prod": "parcel build public/js/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melekv/timesheet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melekv/timesheet/issues"
+  },
+  "homepage": "https://github.com/melekv/timesheet#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}
