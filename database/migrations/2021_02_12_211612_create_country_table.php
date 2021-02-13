@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSelectionListTable extends Migration
+class CreateCountryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateSelectionListTable extends Migration
      */
     public function up()
     {
-        Schema::create('selection_list', function (Blueprint $table) {
-            $table->id();
-            $table->string('superior');
-            $table->timestamps();
+        Schema::create('country', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('name');
+            $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
@@ -27,6 +27,6 @@ class CreateSelectionListTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('selection_list');
+        Schema::dropIfExists('country');
     }
 }

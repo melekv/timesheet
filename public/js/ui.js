@@ -127,6 +127,8 @@ export default class UI {
             newActivity.classList.add('justify-content-between');
             newActivity.dataset.id = `${record.type}-${record.id}`;
 
+            console.log(newActivity);
+
             if (record.type === 'W') {
                 newActivity.classList.add('type-work');
                 newActivity.innerHTML = `
