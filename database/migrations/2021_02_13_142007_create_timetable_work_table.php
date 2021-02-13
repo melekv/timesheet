@@ -14,7 +14,7 @@ class CreateTimetableWorkTable extends Migration
     public function up()
     {
         Schema::create('timetable_work', function (Blueprint $table) {
-            $table->id();
+            $table->mediumIncrements('id');
             $table->unsignedSmallInteger('user_id');
             $table->date('date');
             $table->char('superior', 3);
@@ -27,7 +27,7 @@ class CreateTimetableWorkTable extends Migration
             $table->string('proj_code', 50);
             $table->time('break_from')->nullable();
             $table->time('break_to')->nullable();
-            $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamps();
         });
     }
 

@@ -14,7 +14,13 @@ class CreateTimetableAbsenceTable extends Migration
     public function up()
     {
         Schema::create('timetable_absence', function (Blueprint $table) {
-            $table->id();
+            $table->mediumIncrements('id');
+            $table->unsignedSmallInteger('user_id');
+            $table->date('date');
+            $table->char('superior', 3);
+            $table->string('absence', 50);
+            $table->time('work_from');
+            $table->time('work_to');
             $table->timestamps();
         });
     }
