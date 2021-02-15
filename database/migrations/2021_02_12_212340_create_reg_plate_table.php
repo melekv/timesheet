@@ -15,7 +15,7 @@ class CreateRegPlateTable extends Migration
     {
         Schema::create('reg_plate', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('name');
+            $table->string('name', 100);
             $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }

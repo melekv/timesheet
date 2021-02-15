@@ -15,7 +15,7 @@ class CreateSuperiorTable extends Migration
     {
         Schema::create('superior', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('name');
+            $table->char('name', 3);
             $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }

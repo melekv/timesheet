@@ -15,7 +15,7 @@ class CreateAbsenceTable extends Migration
     {
         Schema::create('absence', function (Blueprint $table) {
             $table->tinyIncrements('id');
-            $table->string('name');
+            $table->string('name', 50);
             $table->dateTime('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
